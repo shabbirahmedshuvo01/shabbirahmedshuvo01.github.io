@@ -318,7 +318,9 @@ export default function Home() {
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <Link href={profile.links.linkedin} target="_blank" className="rounded-md border border-white/15 bg-white/[0.03] px-3 py-1.5 text-sm text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300">LinkedIn</Link>
             <Link href={profile.links.github} target="_blank" className="rounded-md border border-white/15 bg-white/[0.03] px-3 py-1.5 text-sm text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300">GitHub</Link>
-            <Link href={profile.links.portfolio} target="_blank" className="rounded-md border border-white/15 bg-white/[0.03] px-3 py-1.5 text-sm text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300">Previous Portfolio</Link>
+            {/*
+             <Link href={profile.links.portfolio} target="_blank" className="rounded-md border border-white/15 bg-white/[0.03] px-3 py-1.5 text-sm text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300">Previous Portfolio</Link>
+            */}
           </div>
         </motion.div>
       </motion.section>
