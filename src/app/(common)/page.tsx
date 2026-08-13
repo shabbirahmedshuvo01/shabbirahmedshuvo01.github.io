@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import profilePic from "@/assets/profile-pic.png";
+import profilePic from "./../../../public/profile/shuvo-pp.jpeg";
 
 const profile = {
   name: "Shabbir Ahmed Shuvo",
@@ -175,7 +175,7 @@ const education = [
 ];
 
 const resumeFiles = [
-  { label: "Resume", path: "/resumes/resume-a.pdf" },
+  { label: "Resume", path: "/resumes/Shabbir_Ahmed_Shuvo_Resume.pdf" },
   // { label: "Resume - Frontend", path: "/resumes/resume-f.pdf" },
   // { label: "Resume - MERN", path: "/resumes/resume-m.pdf" },
 ];
