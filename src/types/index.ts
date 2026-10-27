@@ -57,6 +57,10 @@ export interface ProjectItem {
   architectureHighlights?: string[];
   liveUrl?: string;
   githubUrl?: string;
+  npmUrl?: string;
+  packageName?: string;
+  version?: string;
+  installCommand?: string;
   isFeatured?: boolean;
 }
 
