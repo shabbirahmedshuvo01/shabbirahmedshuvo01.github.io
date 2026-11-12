@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/data/projects";
+import { ProjectItem } from "@/types";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { Modal } from "@/components/ui/Modal";
 import {
   FiExternalLink,
   FiGithub,
@@ -15,11 +17,16 @@ import {
   FiCopy,
   FiCheck,
   FiTerminal,
+  FiCheckCircle,
+  FiCpu,
+  FiShield,
+  FiTrendingUp,
 } from "react-icons/fi";
 import { SiNpm } from "react-icons/si";
 
 export const Projects: React.FC = () => {
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [activeCaseStudy, setActiveCaseStudy] = useState<ProjectItem | null>(null);
 
   const handleCopy = (text: string, id: string) => {
     if (typeof navigator !== "undefined" && navigator.clipboard) {
@@ -74,7 +81,15 @@ export const Projects: React.FC = () => {
                         {project.version}
                       </Badge>
                     )}
-                    {project.isFeatured ? (
+                    {project.statusBadge ? (
+                      <Badge
+                        variant={project.badgeVariant || (project.isFeatured ? "cyan" : "violet")}
+                        size="sm"
+                        dot={project.isFeatured}
+                      >
+                        {project.statusBadge}
+                      </Badge>
+                    ) : project.isFeatured ? (
                       <Badge variant="cyan" size="sm" dot>
                         Live Commercial Platform
                       </Badge>
@@ -117,6 +132,7 @@ export const Projects: React.FC = () => {
                       className="flex shrink-0 items-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.05] px-2.5 py-1 text-xs text-slate-300 transition-all hover:border-cyan-400/40 hover:bg-white/[0.1] hover:text-white cursor-pointer active:scale-95"
                       title="Copy install command"
                       aria-label="Copy install command"
+                      aria-live="polite"
                     >
                       {copiedId === project.id ? (
                         <>
@@ -166,6 +182,18 @@ export const Projects: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="mt-8 pt-5 border-t border-white/5 flex flex-wrap items-center gap-3">
+                {project.isCaseStudy && project.caseStudy && (
+                  <Button
+                    type="button"
+                    variant="primary"
+                    size="sm"
+                    icon={<FiLayers className="h-4 w-4" />}
+                    onClick={() => setActiveCaseStudy(project)}
+                    aria-label={`View architecture case study for ${project.title}`}
+                  >
+                    View Architecture
+                  </Button>
+                )}
                 {project.liveUrl && (
                   <Button
                     href={project.liveUrl}
@@ -207,6 +235,106 @@ export const Projects: React.FC = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Architecture Case Study Modal */}
+      {activeCaseStudy && activeCaseStudy.caseStudy && (
+        <Modal
+          isOpen={!!activeCaseStudy}
+          onClose={() => setActiveCaseStudy(null)}
+          title={`${activeCaseStudy.title} • Architecture Case Study`}
+          subtitle={activeCaseStudy.subtitle}
+          size="xl"
+        >
+          <div className="space-y-6 text-slate-300">
+            {/* Overview Card */}
+            <div className="rounded-xl border border-white/10 bg-slate-950/60 p-4 sm:p-5">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                <FiCpu className="h-4 w-4" />
+                <span>Executive Architectural Summary</span>
+              </div>
+              <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-slate-200">
+                {activeCaseStudy.caseStudy.overview}
+              </p>
+              <p className="mt-3 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-white/5 pt-3">
+                <strong className="text-slate-200">Role &amp; Responsibilities:</strong>{" "}
+                {activeCaseStudy.caseStudy.roleSummary}
+              </p>
+            </div>
+
+            {/* Core Architectural Pillars */}
+            <div>
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3">
+                <FiShield className="h-4 w-4" />
+                <span>Deep Architectural Implementations</span>
+              </h4>
+              <div className="grid gap-3.5 sm:grid-cols-1">
+                {activeCaseStudy.caseStudy.keyArchitectures.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-xl border border-white/10 bg-white/[0.02] p-4 transition-colors hover:border-cyan-400/30"
+                  >
+                    <h5 className="text-sm font-semibold text-white flex items-center gap-2">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-md bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-[10px] font-mono font-bold">
+                        {idx + 1}
+                      </span>
+                      <span>{item.title}</span>
+                    </h5>
+                    <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-300 pl-7">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tech Stack Pills in Modal */}
+            <div>
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-2.5">
+                <FiLayers className="h-4 w-4" />
+                <span>System Technologies &amp; Patterns</span>
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {activeCaseStudy.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-md border border-white/10 bg-cyan-950/30 px-2.5 py-1 text-xs font-mono font-medium text-cyan-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Impact Metrics */}
+            <div className="rounded-xl border border-emerald-500/20 bg-emerald-950/10 p-4">
+              <h4 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2.5">
+                <FiTrendingUp className="h-4 w-4" />
+                <span>Business &amp; Technical Impact</span>
+              </h4>
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
+                {activeCaseStudy.caseStudy.impactMetrics.map((metric, mIdx) => (
+                  <li key={mIdx} className="flex items-start gap-2.5">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{metric}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Modal Bottom CTA */}
+            <div className="flex justify-end pt-2 border-t border-white/10">
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => setActiveCaseStudy(null)}
+              >
+                Close Specification
+              </Button>
+            </div>
+          </div>
+        </Modal>
+      )}
     </section>
   );
 };

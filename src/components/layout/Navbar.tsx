@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
             {PROFILE_DATA.name}
           </span>
           <span className="hidden font-mono text-xs text-cyan-400/80 sm:inline">
-            • Developer
+            • Software Engineer
           </span>
         </Link>
 

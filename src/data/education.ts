@@ -6,7 +6,7 @@ export const EDUCATION_ITEMS: EducationItem[] = [
     degree: "BSc in Computer Science & Engineering",
     institution: "Dhaka International University",
     location: "Dhaka, Bangladesh",
-    period: "2024 – Nov 2026 (Expected)",
+    period: "2024 – 2028 (Expected)",
     status: "In Progress",
     notes:
       "Advanced coursework in Data Structures, Algorithms, Distributed Systems, Software Engineering Methodologies, and Database Architecture.",

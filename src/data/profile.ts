@@ -3,7 +3,7 @@ import { ProfileData } from "@/types";
 export const PROFILE_DATA: ProfileData = {
   name: "Shabbir Ahmed Shuvo",
   title: "Full-Stack Software Engineer",
-  eyebrow: "AVAILABLE FOR FULL-STACK & FRONTEND ROLES",
+  eyebrow: "IMMEDIATE JOINER • OPEN TO FULL-STACK & FRONTEND ROLES",
   headline: "Building High-Performance Web Applications & Scalable Systems",
   subheadline:
     "Full-Stack Software Engineer specializing in React, Next.js (App Router), TypeScript, and Node.js. Experienced in architecting end-to-end commercial platforms with complex RBAC security, state orchestration via RTK Query, and real-time WebSocket infrastructure.",
@@ -12,7 +12,7 @@ export const PROFILE_DATA: ProfileData = {
   location: "Dhaka, Bangladesh",
   email: "sabbirshuvo006@gmail.com",
   phone: "+88 01762-583535",
-  resumeUrl: "/Shabbir_Ahmed_Shuvo_Resume-f.pdf",
+  resumeUrl: "/Shabbir_Ahmed_Shuvo_Resume.pdf",
   githubUrl: "https://github.com/shabbirahmedshuvo01",
   linkedinUrl: "https://linkedin.com/in/shabbir-ahmed-shuvo",
   metrics: [

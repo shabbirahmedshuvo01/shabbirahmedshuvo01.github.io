@@ -46,6 +46,17 @@ export interface ExperienceItem {
   isCurrent?: boolean;
 }
 
+export interface ProjectCaseStudy {
+  overview: string;
+  roleSummary: string;
+  keyArchitectures: {
+    title: string;
+    description: string;
+  }[];
+  engineeringPillars: string[];
+  impactMetrics: string[];
+}
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -62,6 +73,10 @@ export interface ProjectItem {
   version?: string;
   installCommand?: string;
   isFeatured?: boolean;
+  statusBadge?: string;
+  badgeVariant?: "default" | "cyan" | "emerald" | "violet" | "amber";
+  isCaseStudy?: boolean;
+  caseStudy?: ProjectCaseStudy;
 }
 
 export interface EducationItem {

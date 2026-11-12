@@ -49,6 +49,7 @@ export const Education: React.FC = () => {
                     variant={item.status === "In Progress" ? "cyan" : "emerald"}
                     size="sm"
                     dot
+                    className="whitespace-nowrap shrink-0"
                   >
                     {item.status}
                   </Badge>
@@ -101,9 +102,9 @@ export const Education: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <span className="rounded-md bg-white/[0.04] px-2.5 py-1 text-xs text-emerald-400 font-medium">
-                Verified
-              </span>
+              <Badge variant="emerald" size="sm" dot className="whitespace-nowrap shrink-0">
+                Completed
+              </Badge>
             </div>
           ))}
         </div>

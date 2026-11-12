@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
-              <span>Available for Full-Time & Commercial Contract Work</span>
+              <span>Immediate Joiner • Available for Full-Time &amp; Contract Roles</span>
             </div>
           </div>
 

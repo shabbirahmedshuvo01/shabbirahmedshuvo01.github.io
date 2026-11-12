@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { FiDownload, FiGithub, FiLinkedin, FiMail, FiCheck, FiTerminal } from "react-icons/fi";
 import { useClipboard } from "@/hooks/useClipboard";
-import profilePic from "@/../public/profile/shuvo-pp-v2.jpeg";
+import profilePic from "@/../public/profile/profile.jpg";
 
 export const Hero: React.FC = () => {
   const { copied, copy } = useClipboard();
@@ -153,7 +153,7 @@ export const Hero: React.FC = () => {
                   {PROFILE_DATA.name}
                 </span>
                 <span className="rounded-md bg-cyan-950/80 border border-cyan-400/40 px-2 py-0.5 font-mono text-[11px] text-cyan-300 backdrop-blur-md">
-                  Senior Stack
+                  Core Tech Stack
                 </span>
               </div>
             </div>
