@@ -38,12 +38,17 @@ export const Badge: React.FC<BadgeProps> = ({
       ? "px-2.5 py-0.5 text-xs font-medium"
       : "px-3 py-1 text-xs sm:text-sm font-medium";
 
+  const hasWhitespaceClass = className.includes("whitespace-");
+  const hasShrinkClass = className.includes("shrink-");
+
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full border backdrop-blur-md transition-colors whitespace-nowrap shrink-0 ${variantStyles[variant]} ${sizeClasses} ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full border backdrop-blur-md transition-colors ${
+        hasWhitespaceClass ? "" : "whitespace-nowrap"
+      } ${hasShrinkClass ? "" : "shrink-0"} ${variantStyles[variant]} ${sizeClasses} ${className}`}
     >
       {dot && (
-        <span className="relative flex h-2 w-2">
+        <span className="relative flex h-2 w-2 shrink-0">
           {pulseDot && (
             <span
               className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${dotColors[variant]}`}
@@ -54,7 +59,7 @@ export const Badge: React.FC<BadgeProps> = ({
           />
         </span>
       )}
-      <span>{children}</span>
+      <span className="break-words">{children}</span>
     </span>
   );
 };
