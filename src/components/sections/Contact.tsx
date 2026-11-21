@@ -11,6 +11,8 @@ import {
   FiMail,
   FiPhone,
   FiMapPin,
+  FiClock,
+  FiGlobe,
   FiLinkedin,
   FiGithub,
   FiCheck,
@@ -27,7 +29,7 @@ export const Contact: React.FC = () => {
       <SectionHeading
         eyebrow="Direct Line"
         title="Let's Connect"
-        description="Currently open to high-impact full-stack and frontend engineering roles, contract architectures, and commercial builds."
+        description="Have an open role, a project to build, or a question? Feel free to reach out directly—I typically respond within 24 hours."
       />
 
       <div className="grid gap-8 lg:grid-cols-12">
@@ -44,7 +46,7 @@ export const Contact: React.FC = () => {
               Start a Conversation
             </h3>
             <p className="mt-2 text-sm text-slate-300 leading-relaxed">
-              Whether you need to scale an enterprise Next.js frontend, architect reliable REST APIs with role-based security, or ship a zero-latency WebSocket system, I am ready to contribute immediately.
+              Whether you have an open engineering position, a client platform to build, or want to discuss technical ideas, my inbox is always open.
             </p>
 
             {/* Contact Rows */}
@@ -161,15 +163,24 @@ export const Contact: React.FC = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
               </span>
-              <h4 className="text-sm font-semibold text-white">Operational Status</h4>
+              <h4 className="text-sm font-semibold text-white">Availability</h4>
             </div>
             <p className="mt-3 text-xs text-slate-300 leading-relaxed">
-              Available immediately for engineering consultations, full-time positions, and commercial platform contracts.
+              Available immediately for Full-Stack, Frontend, or Backend roles (Remote &amp; Dhaka On-site).
             </p>
-            <div className="mt-4 pt-4 border-t border-white/10 text-xs text-slate-400 font-mono space-y-1">
-              <p>📍 Location: {PROFILE_DATA.location}</p>
-              <p>⏱️ Response Time: &lt; 24 Hours</p>
-              <p>🌐 Timezone: GMT+6 (Global Remote Ready)</p>
+            <div className="mt-4 pt-4 border-t border-white/10 text-xs text-slate-400 font-mono space-y-2">
+              <p className="flex items-center gap-2">
+                <FiMapPin className="h-4 w-4 text-cyan-400 shrink-0" />
+                <span>Location: {PROFILE_DATA.location}</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <FiClock className="h-4 w-4 text-cyan-400 shrink-0" />
+                <span>Response Time: &lt; 24 Hours</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <FiGlobe className="h-4 w-4 text-cyan-400 shrink-0" />
+                <span>Timezone: GMT+6 (Global Remote Ready)</span>
+              </p>
             </div>
           </Card>
 

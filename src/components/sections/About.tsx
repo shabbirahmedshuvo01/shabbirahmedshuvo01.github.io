@@ -26,7 +26,7 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
       <SectionHeading
-        eyebrow="Architectural Positioning"
+        eyebrow="Background"
         title="About Me"
       />
 

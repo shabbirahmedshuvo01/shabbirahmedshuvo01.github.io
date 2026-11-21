@@ -6,9 +6,9 @@ export const PROJECTS: ProjectItem[] = [
     title: "Underground Arena",
     subtitle: "Real-Time Esports Tournament Platform",
     description:
-      "Real-time esports tournament platform featuring WebSocket-driven bracket state synchronization across concurrent participants without manual page reloads.",
+      "Full-stack eSports tournament platform featuring dynamic tournament trees, real-time match lobbies, automated bracket progression, and team roster management.",
     role: "Full-Stack Engineer & Architect",
-    metrics: "Sub-50ms bracket sync, concurrent live tournament management",
+    metrics: "Real-time bracket updates and concurrent tournament lobbies",
     statusBadge: "Live Commercial Platform",
     badgeVariant: "cyan",
     technologies: [
@@ -20,10 +20,8 @@ export const PROJECTS: ProjectItem[] = [
       "MongoDB",
     ],
     architectureHighlights: [
-      "WebSocket event orchestration for real-time match progression and tournament bracket broadcast.",
-      "Optimistic UI updates with instant state reflection across client views.",
-      "Granular role-based permissions separating tournament organizers, referees, and competitors.",
-      "High-throughput MongoDB aggregation pipelines for leaderboard computation.",
+      "Architected a full-stack eSports tournament platform featuring dynamic tournament trees, real-time match lobbies, automated bracket progression, and team roster management.",
+      "Engineered real-time features using WebSockets and Node.js/Express, with a reactive Next.js frontend, Tailwind CSS, and MongoDB data persistence.",
     ],
     liveUrl: "https://underground-arena.org",
     isFeatured: true,
@@ -31,11 +29,11 @@ export const PROJECTS: ProjectItem[] = [
   {
     id: "activequest",
     title: "ActiveQuest",
-    subtitle: "Class Discovery & Booking Ecosystem",
+    subtitle: "Class Discovery & Booking Platform",
     description:
-      "High-performance class discovery and booking platform featuring multi-parameter filtering, recurring schedule management, role-based dashboards, and a 7-day token-expiring trial funnel.",
+      "Commercial booking and discovery platform featuring multi-parameter search, recurring schedule management, and a 7-day trial booking funnel with session recovery.",
     role: "Lead Frontend Engineer",
-    metrics: "Complete booking lifecycle, dynamic scheduling & trial funnel conversion",
+    metrics: "End-to-end booking lifecycle, dynamic schedules & trial funnel",
     statusBadge: "Client Production • Case Study",
     badgeVariant: "amber",
     technologies: [
@@ -47,10 +45,8 @@ export const PROJECTS: ProjectItem[] = [
       "Google Tag Manager",
     ],
     architectureHighlights: [
-      "Deeply filtered search architecture handling complex calendar schedules and geo-availability.",
-      "Token-expiring 7-day customer acquisition funnel with automated session recovery.",
-      "Multi-tenant role-based dashboards for instructors, studio operators, and end consumers.",
-      "Integrated Google Tag Manager data-layer telemetry for conversion funnel attribution.",
+      "Engineered a commercial booking and discovery platform with multi-parameter filtering, recurring schedule engines, and a 7-day expiring token trial-booking funnel with session recovery.",
+      "Implemented granular RBAC administrative dashboards, dynamic CMS, transactional email notifications, and end-to-end analytics via Google Tag Manager.",
     ],
     isFeatured: true,
     isCaseStudy: true,
@@ -92,11 +88,11 @@ export const PROJECTS: ProjectItem[] = [
   {
     id: "dev-utils-pocs",
     title: "Dev-Utils & Architecture POCs",
-    subtitle: "Modular TypeScript Utility & Systems Toolkit",
+    subtitle: "Modular TypeScript Utility Toolkit",
     description:
-      "Enterprise-grade, zero-dependency TypeScript utility toolkit published as @dev_shuvo/dev-utils. Engineered for error resilience, automated retries, high-throughput debounce/throttling, timezone-resilient date operations, query-string pagination, deep object cleanup, typed storage, and data masking.",
+      "Published, zero-dependency TypeScript utility package on npm providing reusable helper functions for retries, debounce/throttling, date formatting, and data sanitization.",
     role: "Open Source Creator & Maintainer",
-    metrics: "v1.0.4 • Zero runtime dependencies • 100% Vitest coverage • Strict TypeScript ESM",
+    metrics: "v1.0.4 on npm • Zero dependencies • 100% Vitest coverage",
     statusBadge: "Open Source Toolkit",
     badgeVariant: "violet",
     technologies: [
@@ -108,11 +104,10 @@ export const PROJECTS: ProjectItem[] = [
       "npm Package",
     ],
     architectureHighlights: [
-      "Resilience & Flow: Automated exponential backoff retries and structured error-handling wrappers.",
-      "Performance & Throttling: High-efficiency debounce, throttling, and zero-overhead execution primitives.",
-      "Data Sanitization & Security: Query parameter parsers, deep object cleanup, and sensitive data masking.",
-      "Storage & Timezones: Typed web storage abstraction layer and timezone-resilient date operations.",
-      "Production-Grade Packaging: Full test suite in Vitest, dual exports (ESM/CJS), and tree-shakeable side-effect-free bundle.",
+      "Engineered and published reusable utility functions for common full-stack development tasks to streamline codebase setup.",
+      "Automated exponential backoff retries, structured error wrappers, and zero-overhead execution primitives.",
+      "Query parameter parsers, deep object cleanup, and sensitive data masking.",
+      "Typed web storage abstraction layer and timezone-resilient date operations.",
     ],
     githubUrl: "https://github.com/shabbirahmedshuvo01/dev-utils",
     packageName: "@dev_shuvo/dev-utils",

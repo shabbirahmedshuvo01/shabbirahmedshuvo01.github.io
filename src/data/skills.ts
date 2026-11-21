@@ -2,15 +2,15 @@ import { SkillCategory } from "@/types";
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: "frontend-architecture",
-    title: "Frontend Architecture",
-    description: "Component systems, SSR/SSG rendering patterns, and pixel-perfect design system realization.",
+    id: "languages-frontend",
+    title: "Languages & Frontend",
+    description: "Modern typed frontend engineering, SSR/SSG architectures, and responsive design systems.",
     iconName: "layout",
     skills: [
-      "Next.js (App Router, SSR, SSG)",
-      "React.js",
       "TypeScript",
       "JavaScript (ES6+)",
+      "React.js",
+      "Next.js (App Router, SSR)",
       "Tailwind CSS",
       "Framer Motion",
     ],
@@ -18,7 +18,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: "state-data-layer",
     title: "State & Data Layer",
-    description: "Predictable state machines, intelligent client caching, optimistic UI, and API orchestration.",
+    description: "Predictable state orchestration, client-side caching, and resilient API communication pipelines.",
     iconName: "layers",
     skills: [
       "Redux Toolkit",
@@ -26,13 +26,13 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       "TanStack Query",
       "Axios Interceptors",
       "Context API",
-      "RESTful APIs",
+      "REST APIs",
     ],
   },
   {
-    id: "backend-security",
-    title: "Backend & Security",
-    description: "High-concurrency services, event-driven sockets, JWT token security, and granular permission systems.",
+    id: "backend-auth",
+    title: "Backend & Auth",
+    description: "Scalable backend APIs, real-time bi-directional protocols, and multi-tenant security.",
     iconName: "shield",
     skills: [
       "Node.js",
@@ -43,9 +43,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
-    id: "databases-devops-tools",
-    title: "Databases, DevOps & Tools",
-    description: "Cloud database architectures, payment gateway integrations, telemetry, and automated production pipelines.",
+    id: "databases-devops",
+    title: "Databases & DevOps",
+    description: "Cloud database persistence, payment gateways, telemetry tracking, and continuous server deployments.",
     iconName: "database",
     skills: [
       "MongoDB",

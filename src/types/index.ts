@@ -16,12 +16,6 @@ export interface QuickMetric {
   detail?: string;
 }
 
-export interface SkillItem {
-  name: string;
-  icon?: string;
-  featured?: boolean;
-}
-
 export interface SkillCategory {
   id: string;
   title: string;

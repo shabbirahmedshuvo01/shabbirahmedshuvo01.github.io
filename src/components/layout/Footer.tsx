@@ -40,14 +40,14 @@ export const Footer: React.FC = () => {
               <span>{PROFILE_DATA.name}</span>
             </Link>
             <p className="mt-3 max-w-sm text-sm text-slate-400 leading-relaxed">
-              Full-Stack Software Engineer building modern, high-throughput web applications with Next.js, TypeScript, and Node.js.
+              Full-Stack Developer building modern, high-throughput web applications with React, Next.js, TypeScript, and Node.js.
             </p>
             <div className="mt-4 flex items-center gap-2 text-xs text-emerald-400">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
-              <span>Immediate Joiner • Available for Full-Time &amp; Contract Roles</span>
+              <span>Immediate Joiner • Open to Remote &amp; Dhaka On-site Roles</span>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 text-xs text-slate-500 sm:flex-row">
           <p>© {new Date().getFullYear()} {PROFILE_DATA.name}. Architected with Next.js & TypeScript.</p>
           <p className="font-mono text-[11px] text-slate-500">
-            LOC: Dhaka, BD • 23.777176° N, 90.399452° E
+            Dhaka, Bangladesh
           </p>
         </div>
       </div>

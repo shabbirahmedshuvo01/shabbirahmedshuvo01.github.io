@@ -22,15 +22,15 @@ const SITE_URL = "https://shabbirahmedshuvo01.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Software Engineer | React • Next.js • TypeScript • Node.js",
+  title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Developer | React • Next.js • TypeScript • Node.js",
   description:
-    "Official portfolio of Shabbir Ahmed Shuvo (dev shuvo). Full-Stack Software Engineer specializing in React, Next.js (App Router), TypeScript, RTK Query, Node.js, and scalable web architectures.",
+    "Full-Stack Developer with a strong frontend focus and commercial experience engineering production web applications using React, Next.js (App Router), TypeScript, and Node.js. Immediate Joiner.",
   keywords: [
     "Shabbir Ahmed Shuvo",
     "dev shuvo",
     "devshuvo",
     "Sabbir Shuvo",
-    "Full-Stack Software Engineer",
+    "Full-Stack Developer",
     "Full-Stack Developer Dhaka",
     "Next.js Developer Bangladesh",
     "React TypeScript Developer",
@@ -48,24 +48,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shabbirahmedshuvo01.github.io/",
-    title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Software Engineer | React • Next.js • TypeScript • Node.js",
+    title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Developer | Immediate Joiner",
     description:
-      "Official portfolio of Shabbir Ahmed Shuvo (dev shuvo). Full-Stack Software Engineer specializing in React, Next.js (App Router), TypeScript, RTK Query, Node.js, and scalable web architectures.",
+      "Full-Stack Developer with a strong frontend focus and commercial experience engineering production web applications using React, Next.js (App Router), TypeScript, and Node.js. Immediate Joiner.",
     siteName: "Shabbir Ahmed Shuvo Portfolio",
     images: [
       {
         url: `${SITE_URL}/og-banner.png`,
         width: 1200,
         height: 630,
-        alt: "Shabbir Ahmed Shuvo - Full-Stack Software Engineer",
+        alt: "Shabbir Ahmed Shuvo - Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Software Engineer | React • Next.js • TypeScript • Node.js",
+    title: "Shabbir Ahmed Shuvo (dev shuvo) | Full-Stack Developer | Immediate Joiner",
     description:
-      "Official portfolio of Shabbir Ahmed Shuvo (dev shuvo). Full-Stack Software Engineer specializing in React, Next.js (App Router), TypeScript, RTK Query, Node.js, and scalable web architectures.",
+      "Full-Stack Developer with a strong frontend focus and commercial experience engineering production web applications using React, Next.js (App Router), TypeScript, and Node.js. Immediate Joiner.",
     images: [`${SITE_URL}/og-banner.png`],
   },
   robots: {
@@ -88,7 +88,7 @@ const jsonLdData = {
   alternateName: ["dev shuvo", "devshuvo", "Sabbir Shuvo"],
   url: "https://shabbirahmedshuvo01.github.io/",
   image: "https://shabbirahmedshuvo01.github.io/og-banner.png",
-  jobTitle: "Full-Stack Software Engineer",
+  jobTitle: "Full-Stack Developer",
   email: "mailto:sabbirshuvo006@gmail.com",
   telephone: "+8801762583535",
   address: {
@@ -106,10 +106,6 @@ const jsonLdData = {
       name: "Mymensingh Polytechnic Institute",
     },
   ],
-  worksFor: {
-    "@type": "Organization",
-    name: "SM Technology",
-  },
   sameAs: [
     "https://github.com/shabbirahmedshuvo01",
     "https://www.linkedin.com/in/shabbir-ahmed-shuvo",

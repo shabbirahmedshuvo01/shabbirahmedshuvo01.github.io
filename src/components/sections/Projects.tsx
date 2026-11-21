@@ -39,9 +39,9 @@ export const Projects: React.FC = () => {
   return (
     <section id="projects" className="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
       <SectionHeading
-        eyebrow="Production Engineering"
-        title="Featured Systems"
-        description="Commercial platforms and architectural frameworks delivered with zero tolerance for state synchronization lag."
+        eyebrow="Selected Work"
+        title="Featured Projects"
+        description="Production web applications, client platforms, and open-source tools I have built."
       />
 
       <div className="grid gap-8 lg:grid-cols-2">

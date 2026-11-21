@@ -7,7 +7,7 @@ import { PROFILE_DATA } from "@/data/profile";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { FiDownload, FiGithub, FiLinkedin, FiMail, FiCheck, FiTerminal } from "react-icons/fi";
+import { FiDownload, FiGithub, FiLinkedin, FiMail, FiCheck, FiTerminal, FiMapPin } from "react-icons/fi";
 import { useClipboard } from "@/hooks/useClipboard";
 import profilePic from "@/../public/profile/profile.jpg";
 
@@ -41,11 +41,11 @@ export const Hero: React.FC = () => {
 
         {/* Main Heading */}
         <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight sm:leading-[1.15] break-words max-w-full">
-          Building High-Performance{" "}
+          Full-Stack Developer building reliable{" "}
           <span className="bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-300 bg-clip-text text-transparent">
-            Web Applications
+            web apps
           </span>{" "}
-          &amp; Scalable Systems
+          with React, Next.js, and Node.js.
         </h1>
 
         {/* Subheadline */}
@@ -129,7 +129,7 @@ export const Hero: React.FC = () => {
           </button>
           <span className="hidden text-slate-600 sm:inline">•</span>
           <span className="font-mono text-slate-400 flex items-center gap-1.5">
-            <span className="text-cyan-400 text-sm">📍</span>
+            <FiMapPin className="h-3.5 w-3.5 text-cyan-400 shrink-0" />
             <span>{PROFILE_DATA.location}</span>
           </span>
         </div>
@@ -152,7 +152,7 @@ export const Hero: React.FC = () => {
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
               <Image
                 src={profilePic}
-                alt="Shabbir Ahmed Shuvo - Full-Stack Software Engineer (dev shuvo)"
+                alt="Shabbir Ahmed Shuvo - Full-Stack Developer (dev shuvo)"
                 priority
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
@@ -161,7 +161,7 @@ export const Hero: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-2.5 right-2.5 flex items-center justify-between gap-2 text-xs">
                 <span className="font-medium text-white drop-shadow-md truncate">
-                  {PROFILE_DATA.name}
+                  Full-Stack Engineer
                 </span>
                 <span className="rounded-md bg-cyan-950/80 border border-cyan-400/40 px-2 py-0.5 font-mono text-[10px] sm:text-[11px] text-cyan-300 backdrop-blur-md shrink-0 whitespace-nowrap">
                   Core Tech Stack
@@ -174,36 +174,46 @@ export const Hero: React.FC = () => {
               <div className="flex items-center justify-between border-b border-white/10 pb-2 text-[10px] sm:text-[11px] text-slate-400">
                 <span className="flex items-center gap-1.5">
                   <FiTerminal className="h-3 w-3 text-cyan-400 shrink-0" />
-                  <span className="truncate">architect.spec.ts</span>
+                  <span className="truncate">developer.ts</span>
                 </span>
                 <span className="flex items-center gap-1 shrink-0">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-emerald-400">ready</span>
                 </span>
               </div>
-              <div className="mt-2.5 space-y-1.5 text-slate-300">
-                <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+              <div className="mt-2.5 space-y-1 text-slate-300 leading-snug">
+                <p className="flex flex-wrap items-center gap-x-1.5">
                   <span className="text-cyan-400">const</span>
-                  <span>stack = [</span>
+                  <span className="text-white">developer</span>
+                  <span>= &#123;</span>
+                </p>
+                <p className="flex flex-wrap items-center gap-x-1.5 pl-3">
+                  <span className="text-slate-400">name:</span>
+                  <span className="text-emerald-300">&quot;Shabbir Ahmed Shuvo&quot;</span>,
+                </p>
+                <p className="flex flex-wrap items-center gap-x-1.5 pl-3">
+                  <span className="text-slate-400">stack:</span>
+                  <span>[</span>
                   <span className="text-emerald-300">&quot;Next.js&quot;</span>,
                   <span className="text-emerald-300">&quot;TypeScript&quot;</span>,
-                  <span className="text-emerald-300">&quot;Node.js&quot;</span>
-                  <span>];</span>
+                  <span className="text-emerald-300">&quot;Node.js&quot;</span>,
+                  <span className="text-emerald-300">&quot;MongoDB&quot;</span>
+                  <span>],</span>
                 </p>
-                <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
-                  <span className="text-cyan-400">const</span>
-                  <span>security =</span>
-                  <span className="text-amber-300">&quot;RBAC &amp; JWT&quot;</span>;
+                <p className="flex flex-wrap items-center gap-x-1.5 pl-3">
+                  <span className="text-slate-400">focus:</span>
+                  <span>[</span>
+                  <span className="text-sky-300">&quot;Frontend Architecture&quot;</span>,
+                  <span className="text-sky-300">&quot;REST APIs&quot;</span>,
+                  <span className="text-sky-300">&quot;Real-Time Apps&quot;</span>
+                  <span>],</span>
                 </p>
-                <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
-                  <span className="text-cyan-400">const</span>
-                  <span>state =</span>
-                  <span className="text-sky-300">&quot;RTK Query &amp; Sockets&quot;</span>;
+                <p className="flex flex-wrap items-center gap-x-1.5 pl-3">
+                  <span className="text-slate-400">status:</span>
+                  <span className="text-amber-300">&quot;Available immediately&quot;</span>,
                 </p>
-                <p className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
-                  <span className="text-cyan-400">const</span>
-                  <span>focus =</span>
-                  <span className="text-fuchsia-300">&quot;Commercial Scale&quot;</span>;
+                <p className="flex flex-wrap items-center gap-x-1.5">
+                  <span>&#125;;</span>
                 </p>
               </div>
             </div>
